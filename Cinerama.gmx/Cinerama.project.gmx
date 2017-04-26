@@ -8,7 +8,11 @@
   <sprites name="sprites"/>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\DisplayManager</object>
+  </objects>
   <rooms name="rooms">
+    <room>rooms\rDisplayInit</room>
     <room>rooms\rSplashScreen</room>
   </rooms>
   <help>
