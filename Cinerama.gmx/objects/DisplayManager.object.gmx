@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>/// Display properties
-idealWidth = 1280;
-idealHeight = 720;
+idealWidth = 720;
+idealHeight = 1280;
 zoom = 1;
 maxZoom = 1;
 

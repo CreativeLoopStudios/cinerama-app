@@ -5,14 +5,47 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="MovieArt">
+      <sprite>sprites\sSnowWhite</sprite>
+      <sprite>sprites\sGodfather</sprite>
+    </sprites>
+    <sprites name="Medals">
+      <sprite>sprites\sBronzeMedal</sprite>
+      <sprite>sprites\sSilverMedal</sprite>
+      <sprite>sprites\sGoldMedal</sprite>
+    </sprites>
+    <sprites name="Keyboard">
+      <sprite>sprites\sQ</sprite>
+      <sprite>sprites\sW</sprite>
+    </sprites>
+    <sprites name="Buttons">
+      <sprite>sprites\sPlayButton</sprite>
+      <sprite>sprites\sNextButton</sprite>
+    </sprites>
+    <sprites name="Brands">
+      <sprite>sprites\sCineramaBrand</sprite>
+    </sprites>
+    <sprites name="Timer">
+      <sprite>sprites\sBronzeTimer</sprite>
+      <sprite>sprites\sSilverTimer</sprite>
+      <sprite>sprites\sGoldTimer</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\DisplayManager</object>
+    <objects name="Util">
+      <object>objects\DisplayManager</object>
+    </objects>
+    <objects name="Keyboard">
+      <object>objects\KeyboardManager</object>
+      <object>objects\Q</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rDisplayInit</room>
+    <room>rooms\rLevelOne</room>
     <room>rooms\rSplashScreen</room>
   </rooms>
   <help>
