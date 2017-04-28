@@ -31,16 +31,32 @@
       <sprite>sprites\sSilverTimer</sprite>
       <sprite>sprites\sGoldTimer</sprite>
     </sprites>
+    <sprites name="InputMovie">
+      <sprite>sprites\sBarLetter</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Keyboard">
+      <script>scripts\KeyTouched.gml</script>
+    </scripts>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\fWords</font>
+  </fonts>
   <objects name="objects">
     <objects name="Util">
       <object>objects\DisplayManager</object>
     </objects>
     <objects name="Keyboard">
-      <object>objects\KeyboardManager</object>
+      <object>objects\KeyboardKey</object>
       <object>objects\Q</object>
+      <object>objects\W</object>
+    </objects>
+    <objects name="InputMovie">
+      <object>objects\Word</object>
+      <object>objects\BarLetter</object>
     </objects>
   </objects>
   <rooms name="rooms">
