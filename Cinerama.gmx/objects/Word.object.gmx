@@ -65,6 +65,7 @@ show_debug_message(wordInput);
 X = initX;
 for(var i = 0; i &lt; string_length(wordInput); i++)
 {
+    draw_set_colour(c_white);
     draw_set_font(fWords);
     draw_text(X, y - 20, string_char_at(wordInput, i));
     X += 100;
