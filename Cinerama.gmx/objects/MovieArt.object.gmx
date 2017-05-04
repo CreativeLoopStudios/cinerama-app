@@ -26,11 +26,20 @@
           <argument>
             <kind>1</kind>
             <string>/// init data
-wordToGuess = "spiderman";
+spriteToDraw = noone;
 
-wordInput = "";
+switch(global.level)
+{
+    case 1:
+        spriteToDraw = sSnowWhite;
+        break;
+    case 2:
+        spriteToDraw = sGodfather;
+        break;
+}
 
-instance_create(0, y - 80, BarRed);
+x = window_get_width() / 2;
+y = window_get_height() / 2 - 100;
 </string>
           </argument>
         </arguments>
@@ -53,26 +62,8 @@ instance_create(0, y - 80, BarRed);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-var initX = x;
-var X = x;
-// draw bar letter 
-for(var i = 0; i &lt; string_length(wordToGuess); i++)
-{
-    instance_create(X, y, BarLetter);
-    X += 60;
-}
-
-X = initX;
-for(var i = 0; i &lt; string_length(wordInput); i++)
-{
-    draw_set_colour(c_white);
-    draw_set_font(fWords);
-    draw_text(X - 5, y - 40, string_char_at(wordInput, i));
-    X += 60;
-}
-
-
+            <string>/// drawing sprite
+draw_sprite_ext(spriteToDraw, 0, x, y, 0.2, 0.2, 0, c_white, 1);
 </string>
           </argument>
         </arguments>

@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>3815217</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>InitialiseRoom(1);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -53,7 +53,7 @@
   <instances>
     <instance objName="Q" x="128" y="960" name="inst_90687E86" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="W" x="192" y="960" name="inst_743394C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Word" x="64" y="704" name="inst_D7112233" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Word" x="32" y="736" name="inst_D7112233" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

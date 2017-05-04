@@ -31,8 +31,10 @@
       <sprite>sprites\sSilverTimer</sprite>
       <sprite>sprites\sGoldTimer</sprite>
     </sprites>
-    <sprites name="InputMovie">
+    <sprites name="UI">
       <sprite>sprites\sBarLetter</sprite>
+      <sprite>sprites\sBarBlue</sprite>
+      <sprite>sprites\sBarRed</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -41,6 +43,7 @@
     <scripts name="Keyboard">
       <script>scripts\KeyTouched.gml</script>
     </scripts>
+    <script>scripts\InitialiseRoom.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fWords</font>
@@ -54,9 +57,14 @@
       <object>objects\Q</object>
       <object>objects\W</object>
     </objects>
-    <objects name="InputMovie">
+    <objects name="MovieArt">
+      <object>objects\MovieArt</object>
+    </objects>
+    <objects name="UI">
       <object>objects\Word</object>
       <object>objects\BarLetter</object>
+      <object>objects\BarBlue</object>
+      <object>objects\BarRed</object>
     </objects>
   </objects>
   <rooms name="rooms">
