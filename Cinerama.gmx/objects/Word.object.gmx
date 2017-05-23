@@ -64,7 +64,7 @@ for(var i = 0; i &lt; string_length(wordToGuess); i++)
 }
 
 X = initX;
-for(var i = 0; i &lt; string_length(wordInput); i++)
+for(var i = 1; i &lt;= string_length(wordInput); i++)
 {
     draw_set_colour(c_white);
     draw_set_font(fWords);

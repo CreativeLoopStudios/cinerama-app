@@ -34,10 +34,10 @@ maxZoom = 1;
 aspectRatio = display_get_width() / display_get_height();
 
 idealWidth = round(idealHeight * aspectRatio);
-// maitain the width: ideaHeight = round(idealWidth / aspectRatio)
+//idealHeight = round(idealWidth / aspectRatio);
 
 // Perfect pixel scaling (it's not required for all games)
-if (display_get_width() mod idealWidth != 0)
+/*if (display_get_width() mod idealWidth != 0)
 {
     var d = round(display_get_width() / idealWidth);
     idealWidth = display_get_width() / d;
@@ -46,7 +46,7 @@ if (display_get_height() mod idealHeight != 0)
 {
     var d = round(display_get_height() / idealHeight);
     idealHeight = display_get_height() / d;
-}
+}*/
 
 // Check for odd numbers
 if (idealWidth &amp; 1) idealWidth++;
@@ -61,6 +61,7 @@ for(var i = 1; i &lt;= room_last; i++)
     {
         room_set_view(i, 0, true, 0, 0, idealWidth, idealHeight, 0, 0, idealWidth, idealHeight, 0, 0, 0, 0, -1);
         room_set_view_enabled(i, true);
+
     }
 }
 
