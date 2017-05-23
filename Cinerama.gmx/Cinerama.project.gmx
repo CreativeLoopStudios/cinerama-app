@@ -16,8 +16,7 @@
       <sprite>sprites\sGoldMedal</sprite>
     </sprites>
     <sprites name="Keyboard">
-      <sprite>sprites\sQ</sprite>
-      <sprite>sprites\sW</sprite>
+      <sprite>sprites\sKey</sprite>
     </sprites>
     <sprites name="Buttons">
       <sprite>sprites\sPlayButton</sprite>
@@ -47,15 +46,41 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fWords</font>
+    <font>fonts\fWordsLarge</font>
   </fonts>
   <objects name="objects">
     <objects name="Util">
       <object>objects\DisplayManager</object>
+      <object>objects\Game</object>
     </objects>
     <objects name="Keyboard">
       <object>objects\KeyboardKey</object>
       <object>objects\Q</object>
       <object>objects\W</object>
+      <object>objects\E</object>
+      <object>objects\R</object>
+      <object>objects\T</object>
+      <object>objects\Y</object>
+      <object>objects\U</object>
+      <object>objects\I</object>
+      <object>objects\O</object>
+      <object>objects\P</object>
+      <object>objects\A</object>
+      <object>objects\S</object>
+      <object>objects\D</object>
+      <object>objects\F</object>
+      <object>objects\G</object>
+      <object>objects\H</object>
+      <object>objects\J</object>
+      <object>objects\K</object>
+      <object>objects\L</object>
+      <object>objects\Z</object>
+      <object>objects\X</object>
+      <object>objects\C</object>
+      <object>objects\V</object>
+      <object>objects\B</object>
+      <object>objects\N</object>
+      <object>objects\M</object>
     </objects>
     <objects name="MovieArt">
       <object>objects\MovieArt</object>

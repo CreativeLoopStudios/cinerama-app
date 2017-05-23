@@ -28,7 +28,7 @@
             <string>/// init data
 event_inherited();
 
-key = "Q";
+key = "E";
 </string>
           </argument>
         </arguments>
