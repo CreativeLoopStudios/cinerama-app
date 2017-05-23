@@ -43,8 +43,48 @@ switch(global.level)
         break;
 }
 
-x = DisplayManager.idealWidth / 2;
-y = 400;
+xMovie = global.middleOfScreen;
+yMovie = 400;
+
+yBar = yMovie + 300;
+
+instance_create(0, yBar, RedBar);
+
+xWord = 50;
+yWord = yBar + 50;
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// create bar letters
+var X = xWord;
+
+for(var i = 1; i &lt;= string_length(wordToGuess); i++)
+{
+    if(not(string_char_at(wordToGuess, i) == " "))
+    {
+        instance_create(X, yWord, BarLetter);
+    }
+    X += 60;
+}
 </string>
           </argument>
         </arguments>
@@ -68,7 +108,39 @@ y = 400;
           <argument>
             <kind>1</kind>
             <string>/// drawing movie_art
-draw_sprite_ext(spriteToDraw, 0, x, y, 0.2, 0.2, 0, c_white, 1);
+draw_sprite_ext(spriteToDraw, 0, xMovie, yMovie, 0.2, 0.2, 0, c_white, 1);
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// draw user letters
+var X = xWord;
+for(var i = 1; i &lt;= string_length(wordInput); i++)
+{
+    if(not(string_char_at(wordToGuess, i) == " "))
+    {
+        draw_set_colour(c_white);
+        draw_set_font(fWords);
+        draw_text(X + 10, yWord - 10, string_char_at(wordInput, i));
+    }
+    X += 60;
+}
 </string>
           </argument>
         </arguments>

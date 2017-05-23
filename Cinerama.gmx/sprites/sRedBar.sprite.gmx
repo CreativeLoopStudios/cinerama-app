@@ -8,7 +8,7 @@
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
-  <bbox_right>820</bbox_right>
+  <bbox_right>1079</bbox_right>
   <bbox_top>0</bbox_top>
   <bbox_bottom>108</bbox_bottom>
   <HTile>0</HTile>
@@ -17,9 +17,9 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>821</width>
+  <width>1080</width>
   <height>109</height>
   <frames>
-    <frame index="0">images\sBarRed_0.png</frame>
+    <frame index="0">images\sRedBar_0.png</frame>
   </frames>
 </sprite>

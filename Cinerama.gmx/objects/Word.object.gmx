@@ -30,7 +30,7 @@ wordToGuess = "spiderman";
 
 wordInput = "";
 
-instance_create(0, y - 80, BarRed);
+instance_create(0, y - 80, RedBar);
 </string>
           </argument>
         </arguments>
