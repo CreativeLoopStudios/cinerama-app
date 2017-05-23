@@ -28,13 +28,18 @@
             <string>/// init data
 spriteToDraw = noone;
 
+wordToGuess = noone;
+wordInput = "";
+
 switch(global.level)
 {
     case 1:
         spriteToDraw = sSnowWhite;
+        wordToGuess = "branca de neve";
         break;
     case 2:
         spriteToDraw = sGodfather;
+        wordToGuess = "poderoso chefão";
         break;
 }
 
@@ -62,7 +67,7 @@ y = window_get_height() / 2 - 100;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// drawing sprite
+            <string>/// drawing movie_art
 draw_sprite_ext(spriteToDraw, 0, x, y, 0.2, 0.2, 0, c_white, 1);
 </string>
           </argument>
