@@ -39,10 +39,14 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="Game">
+      <script>scripts\LevelWin.gml</script>
+      <script>scripts\LevelLost.gml</script>
+    </scripts>
+    <script>scripts\InitialiseRoom.gml</script>
     <scripts name="Keyboard">
       <script>scripts\KeyTouched.gml</script>
     </scripts>
-    <script>scripts\InitialiseRoom.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fWords</font>
@@ -55,6 +59,7 @@
     </objects>
     <objects name="Keyboard">
       <object>objects\KeyboardKey</object>
+      <object>objects\Backspace</object>
       <object>objects\Q</object>
       <object>objects\W</object>
       <object>objects\E</object>

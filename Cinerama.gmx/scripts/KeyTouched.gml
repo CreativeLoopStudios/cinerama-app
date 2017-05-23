@@ -5,14 +5,22 @@ if(instance_exists(MovieArt))
 {
     with(MovieArt)
     {
-        if(string_char_at(wordToGuess, string_length(wordInput) + 1) == " ")
+        show_debug_message(key);
+        if(key == "<")
         {
-            wordInput += " ";
+            wordInput = string_delete(wordInput, string_length(wordInput), 1);
         }
-    
-        if(string_length(wordInput) < string_length(wordToGuess))
+        else
         {
-            wordInput += key;
+            if(string_char_at(wordToGuess, string_length(wordInput) + 1) == " ")
+            {
+                wordInput += " ";
+            }
+        
+            if(string_length(wordInput) < string_length(wordToGuess))
+            {
+                wordInput += key;
+            }
         }
     }
 }
