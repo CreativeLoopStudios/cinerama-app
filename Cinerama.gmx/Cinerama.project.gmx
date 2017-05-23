@@ -68,6 +68,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rDisplayInit</room>
     <room>rooms\rLevelOne</room>
     <room>rooms\rSplashScreen</room>
   </rooms>

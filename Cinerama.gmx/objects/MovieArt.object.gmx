@@ -38,8 +38,8 @@ switch(global.level)
         break;
 }
 
-x = window_get_width() / 2;
-y = window_get_height() / 2 - 100;
+x = DisplayManager.idealWidth / 2;
+y = 400;
 </string>
           </argument>
         </arguments>
