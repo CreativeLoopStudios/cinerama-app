@@ -17,6 +17,7 @@
     </sprites>
     <sprites name="Keyboard">
       <sprite>sprites\sKey</sprite>
+      <sprite>sprites\sKeyLarge</sprite>
     </sprites>
     <sprites name="Buttons">
       <sprite>sprites\sPlayButton</sprite>
@@ -42,6 +43,7 @@
     <scripts name="Game">
       <script>scripts\LevelWin.gml</script>
       <script>scripts\LevelLost.gml</script>
+      <script>scripts\WordNotCompleted.gml</script>
     </scripts>
     <script>scripts\InitialiseRoom.gml</script>
     <scripts name="Keyboard">
@@ -63,6 +65,7 @@
     <objects name="Keyboard">
       <object>objects\KeyboardKey</object>
       <object>objects\Backspace</object>
+      <object>objects\Enter</object>
       <object>objects\Q</object>
       <object>objects\W</object>
       <object>objects\E</object>
