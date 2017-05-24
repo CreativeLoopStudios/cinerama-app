@@ -5,10 +5,10 @@ if(instance_exists(MovieArt))
 {
     with(MovieArt)
     {
-        show_debug_message(key);
         if(key == "<")
         {
             wordInput = string_delete(wordInput, string_length(wordInput), 1);
+            wordInput = Trim(wordInput);
         }
         else
         {
