@@ -17,11 +17,11 @@ if(instance_exists(MovieArt))
             {
                 if(wordInput == wordToGuess)
                 {
-                    LevelWin();
+                    instance_create(0, 0, WinPopup);
                 }
                 else
                 {
-                    LevelLost();
+                    instance_create(0, 0, LosePopup);
                 }
             }
             else

@@ -35,14 +35,14 @@
       <sprite>sprites\sBarLetter</sprite>
       <sprite>sprites\sBlueBar</sprite>
       <sprite>sprites\sRedBar</sprite>
+      <sprite>sprites\sPopup</sprite>
+      <sprite>sprites\sCloseButton</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Game">
-      <script>scripts\LevelWin.gml</script>
-      <script>scripts\LevelLost.gml</script>
       <script>scripts\WordNotCompleted.gml</script>
     </scripts>
     <script>scripts\InitialiseRoom.gml</script>
@@ -100,6 +100,9 @@
       <object>objects\BarLetter</object>
       <object>objects\BlueBar</object>
       <object>objects\RedBar</object>
+      <object>objects\Popup</object>
+      <object>objects\WinPopup</object>
+      <object>objects\LosePopup</object>
     </objects>
   </objects>
   <rooms name="rooms">
