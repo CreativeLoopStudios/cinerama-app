@@ -36,7 +36,10 @@
       <sprite>sprites\sBlueBar</sprite>
       <sprite>sprites\sRedBar</sprite>
       <sprite>sprites\sPopup</sprite>
-      <sprite>sprites\sCloseButton</sprite>
+      <sprite>sprites\sNextBtn</sprite>
+      <sprite>sprites\sNextHoverBtn</sprite>
+      <sprite>sprites\sBackBtn</sprite>
+      <sprite>sprites\sBackHoverBtn</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -101,8 +104,9 @@
       <object>objects\BlueBar</object>
       <object>objects\RedBar</object>
       <object>objects\Popup</object>
-      <object>objects\WinPopup</object>
-      <object>objects\LosePopup</object>
+      <object>objects\Btn</object>
+      <object>objects\NextBtn</object>
+      <object>objects\BackBtn</object>
     </objects>
   </objects>
   <rooms name="rooms">
