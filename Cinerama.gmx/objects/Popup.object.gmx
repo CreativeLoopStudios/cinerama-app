@@ -26,19 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>/// init values
-
-x = DisplayManager.idealWidth / 2;
-y = display_get_height();
-
 fade = 0;
+spdFade = 0.03;
 
 close = false;
 
 targetY = display_get_height() / 2;
 
 // buttons
-nextBtn = instance_create(x + 160, y + 250, NextBtn);
-backBtn = instance_create(x - 160, y + 250, BackBtn);
+nextBtn = CreateObjWithParent(x, y, NextBtn, id, 160, 250);
+backBtn = CreateObjWithParent(x, y, BackBtn, id, -160, 250);
 </string>
           </argument>
         </arguments>
@@ -64,15 +61,40 @@ backBtn = instance_create(x - 160, y + 250, BackBtn);
             <string>/// animation
 if(targetY &lt; y and not(close))
 {
-    y -= 10;
-    nextBtn.y -= 10;
-    backBtn.y -= 10;
+    y -= 15;
 }
-else if(display_get_height() &gt; y and close)
+else if(display_get_height() + sprite_height &gt; y and close)
 {
-    y += 10;
-    nextBtn.y += 10;
-    backBtn.y += 10;
+    y += 15;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// fade
+if(not(close) and fade &lt;= 1)
+{
+    fade += spdFade;
+}
+else if(fade &gt;= 0 and close)
+{
+    fade -= spdFade;
 }
 </string>
           </argument>
@@ -98,15 +120,6 @@ else if(display_get_height() &gt; y and close)
             <kind>1</kind>
             <string>/// draw popup
 draw_sprite_ext(sPopup, 0, x, y, 1, 1, 0, c_white, fade);
-
-if(not(close) and fade &lt;= 1)
-{
-    fade += 0.05;
-}
-else if(fade &gt;= 0 and close)
-{
-    fade -= 0.05;
-}
 </string>
           </argument>
         </arguments>

@@ -47,13 +47,17 @@
   <scripts name="scripts">
     <scripts name="Game">
       <script>scripts\WordNotCompleted.gml</script>
+      <script>scripts\NextLevel.gml</script>
+      <script>scripts\CleanRoom.gml</script>
+      <script>scripts\TheEnd.gml</script>
     </scripts>
-    <script>scripts\InitialiseRoom.gml</script>
     <scripts name="Keyboard">
       <script>scripts\KeyTouched.gml</script>
     </scripts>
     <scripts name="Util">
       <script>scripts\Trim.gml</script>
+      <script>scripts\CreatePopup.gml</script>
+      <script>scripts\CreateObjWithParent.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -111,7 +115,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rDisplayInit</room>
-    <room>rooms\rLevelOne</room>
+    <room>rooms\rLevel</room>
+    <room>rooms\rSelectLevel</room>
     <room>rooms\rSplashScreen</room>
   </rooms>
   <help>

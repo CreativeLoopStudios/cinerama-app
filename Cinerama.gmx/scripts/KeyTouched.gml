@@ -17,7 +17,7 @@ if(instance_exists(MovieArt))
             {
                 if(wordInput == wordToGuess)
                 {
-                    instance_create(0, 0, Popup);
+                    CreatePopup();
                 }
                 else
                 {

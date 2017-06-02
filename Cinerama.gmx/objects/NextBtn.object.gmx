@@ -56,9 +56,14 @@ event_inherited();
 
 if(mouse_check_button_released(mb_left))
 {
-    if(position_meeting(mouse_x, mouse_y, self))
+    if(position_meeting(mouse_x, mouse_y, id))
     {
-        InitialiseRoom(2);
+        with(Popup)
+        {
+            close = true;
+        }
+        CleanRoom();
+        NextLevel();
     }
 }
 </string>

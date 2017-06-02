@@ -1,7 +1,5 @@
-/// InitialiseRoom(level)
-global.level = argument0;
-
-global.middleOfScreen = DisplayManager.idealWidth / 2;
+/// BeginLevel(level)
+global.level += 1;
 
 global.debug = true;
 

@@ -28,7 +28,7 @@
             <string>/// init data
 spriteToDraw = noone;
 
-wordToGuess = noone;
+wordToGuess = "";
 wordInput = "";
 
 switch(global.level)
@@ -41,6 +41,9 @@ switch(global.level)
         spriteToDraw = sGodfather;
         wordToGuess = "PODEROSO CHEFÃO";
         break;
+    default:
+        TheEnd();
+        instance_destroy();
 }
 
 xMovie = global.middleOfScreen;
@@ -51,7 +54,7 @@ yBar = yMovie + 300;
 instance_create(0, yBar, RedBar);
 
 xWord = 50;
-yWord = yBar + 50;
+yWord = yBar + 80;
 
 
 </string>
