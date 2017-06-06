@@ -26,12 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>/// init values
+spd = 25;
+
 fade = 0;
 spdFade = 0.03;
 
 close = false;
 
-targetY = display_get_height() / 2;
+targetY = DisplayManager.idealHeight / 2;
 
 // buttons
 nextBtn = CreateObjWithParent(x, y, NextBtn, id, 160, 250);
@@ -61,11 +63,11 @@ backBtn = CreateObjWithParent(x, y, BackBtn, id, -160, 250);
             <string>/// animation
 if(targetY &lt; y and not(close))
 {
-    y -= 15;
+    y -= spd;
 }
-else if(display_get_height() + sprite_height &gt; y and close)
+else if(DisplayManager.idealHeight + sprite_height &gt; y and close)
 {
-    y += 15;
+    y += spd;
 }
 </string>
           </argument>
@@ -95,6 +97,31 @@ if(not(close) and fade &lt;= 1)
 else if(fade &gt;= 0 and close)
 {
     fade -= spdFade;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// destroy when exits room
+if(y &gt;= DisplayManager.idealHeight and close)
+{
+    instance_destroy();
 }
 </string>
           </argument>

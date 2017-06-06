@@ -61,7 +61,7 @@ key = "";
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -78,7 +78,9 @@ key = "";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw font
+            <string>/// draw self and font
+draw_self();
+
 draw_set_colour(c_black);
 draw_set_font(fWordsLarge);
 draw_text(x + 10, y + 20, key);

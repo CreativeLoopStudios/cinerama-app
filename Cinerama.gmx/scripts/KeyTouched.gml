@@ -1,7 +1,7 @@
 /// KeyTouched(key)
 var key = argument0;
 
-if(instance_exists(MovieArt))
+if(instance_exists(MovieArt) and not(instance_exists(Popup)))
 {
     with(MovieArt)
     {
@@ -10,24 +10,28 @@ if(instance_exists(MovieArt))
             wordInput = string_delete(wordInput, string_length(wordInput), 1);
             wordInput = Trim(wordInput);
         }
-        else if(key == "enter")
+        else if(key == ENTER)
         {
             /// win/lose condition
-            if(string_length(wordInput) == string_length(wordToGuess))
+            if(string_length(wordInput) == string_length(wordToGuess) and wordInput == wordToGuess)
             {
-                if(wordInput == wordToGuess)
-                {
-                    CreatePopup();
-                }
-                else
-                {
-                
-                }
+                CreatePopup();
             }
             else
             {
-                WordNotCompleted();
+                WrongWord();
             }
+        }
+        else if(key == CHEAT)
+        {
+            with(MovieArt)
+            {
+                wordInput = wordToGuess;
+            }
+        }
+        else if(key == RESTART)
+        {
+            game_restart();
         }
         else
         {

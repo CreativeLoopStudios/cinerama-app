@@ -46,7 +46,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Game">
-      <script>scripts\WordNotCompleted.gml</script>
+      <script>scripts\WrongWord.gml</script>
       <script>scripts\NextLevel.gml</script>
       <script>scripts\CleanRoom.gml</script>
       <script>scripts\TheEnd.gml</script>
@@ -72,6 +72,8 @@
     <objects name="Keyboard">
       <object>objects\KeyboardKey</object>
       <object>objects\Backspace</object>
+      <object>objects\Cheat</object>
+      <object>objects\Restart</object>
       <object>objects\Enter</object>
       <object>objects\Q</object>
       <object>objects\W</object>
@@ -119,6 +121,11 @@
     <room>rooms\rSelectLevel</room>
     <room>rooms\rSplashScreen</room>
   </rooms>
+  <constants number="3">
+    <constant name="ENTER">1</constant>
+    <constant name="CHEAT">2</constant>
+    <constant name="RESTART">3</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

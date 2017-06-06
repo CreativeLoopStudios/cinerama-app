@@ -31,7 +31,7 @@ spriteToDraw = noone;
 wordToGuess = "";
 wordInput = "";
 
-switch(global.level)
+switch(Game.level)
 {
     case 1:
         spriteToDraw = sSnowWhite;
@@ -46,7 +46,7 @@ switch(global.level)
         instance_destroy();
 }
 
-xMovie = global.middleOfScreen;
+xMovie = Game.middleOfScreen;
 yMovie = 400;
 
 yBar = yMovie + 300;

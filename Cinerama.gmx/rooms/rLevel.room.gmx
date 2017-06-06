@@ -11,6 +11,10 @@
   <colour>3815217</colour>
   <showcolour>-1</showcolour>
   <code>instance_create(0, 0, Game);
+instance_create(0, 0, BlueBar);
+
+instance_create(100, DisplayManager.idealHeight - 50, Cheat);
+instance_create(300, DisplayManager.idealHeight - 50, Restart);
 
 NextLevel();</code>
   <enableViews>0</enableViews>

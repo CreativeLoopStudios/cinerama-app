@@ -1,2 +1,2 @@
 /// CreatePopup()
-instance_create(DisplayManager.idealWidth / 2, display_get_height() + (sprite_get_height(sPopup) / 2), Popup);
+instance_create(DisplayManager.idealWidth / 2, DisplayManager.idealHeight + (sprite_get_height(sPopup) / 2), Popup);
