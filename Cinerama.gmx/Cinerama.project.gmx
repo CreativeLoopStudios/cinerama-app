@@ -65,6 +65,7 @@
     <font>fonts\fWordsLarge</font>
   </fonts>
   <objects name="objects">
+    <object>objects\MovieArt</object>
     <objects name="Util">
       <object>objects\DisplayManager</object>
       <object>objects\Game</object>
@@ -102,9 +103,6 @@
       <object>objects\N</object>
       <object>objects\M</object>
     </objects>
-    <objects name="MovieArt">
-      <object>objects\MovieArt</object>
-    </objects>
     <objects name="UI">
       <object>objects\BarLetter</object>
       <object>objects\BlueBar</object>
@@ -114,11 +112,15 @@
       <object>objects\NextBtn</object>
       <object>objects\BackBtn</object>
     </objects>
+    <objects name="LevelSelect">
+      <object>objects\LevelManager</object>
+      <object>objects\LevelBox</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rDisplayInit</room>
+    <room>rooms\rLevelSelect</room>
     <room>rooms\rLevel</room>
-    <room>rooms\rSelectLevel</room>
     <room>rooms\rSplashScreen</room>
   </rooms>
   <constants number="3">

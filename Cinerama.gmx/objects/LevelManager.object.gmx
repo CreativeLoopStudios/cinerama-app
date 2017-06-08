@@ -25,65 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init key
-key = "";
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (mouse_check_button_pressed(mb_left))
+            <string>/// init levels
+var xx = x;
+var yy = y;
+for(var i = 0; i &lt; array_length_1d(Game.levelSpr); i++)
 {
-    if(position_meeting(mouse_x, mouse_y, id))
-    {
-        KeyTouched(key);
-    }
+    var levelBox = instance_create(xx, yy, LevelBox);
+    levelBox.sprite_index = Game.levelSpr[i];
+    levelBox.level = i;
+    xx += levelBox.width + 50;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// draw self and font
-draw_self();
-
-draw_set_colour(c_black);
-draw_set_font(fWordsLarge);
-draw_text(x + 10, y + 20, key);
 </string>
           </argument>
         </arguments>

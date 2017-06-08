@@ -26,25 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>/// init data
-spriteToDraw = noone;
+spriteToDraw = Game.levelSpr[Game.level];
 
-wordToGuess = "";
+wordToGuess = Game.levelWord[Game.level];
 wordInput = "";
-
-switch(Game.level)
-{
-    case 1:
-        spriteToDraw = sSnowWhite;
-        wordToGuess = "BRANCA DE NEVE";
-        break;
-    case 2:
-        spriteToDraw = sGodfather;
-        wordToGuess = "PODEROSO CHEFÃO";
-        break;
-    default:
-        TheEnd();
-        instance_destroy();
-}
 
 xMovie = Game.middleOfScreen;
 yMovie = 400;

@@ -28,6 +28,12 @@
             <string>/// init level
 level = 0;
 
+levelSpr[0] = sSnowWhite;
+levelWord[0] = "BRANCA DE NEVE";
+
+levelSpr[1] = sGodfather;
+levelWord[1] = "PODEROSO CHEFÃO";
+
 middleOfScreen = DisplayManager.idealWidth / 2;
 
 debug = true;

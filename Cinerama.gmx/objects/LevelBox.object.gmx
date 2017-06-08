@@ -25,8 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init key
-key = "";
+            <string>/// init data
+level = noone;
+
+width = 150;
+height = 150;
 </string>
           </argument>
         </arguments>
@@ -49,12 +52,11 @@ key = "";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (mouse_check_button_pressed(mb_left))
+            <string>/// touch
+if(mouse_check_button_pressed(mb_left) and instance_position(mouse_x, mouse_y, id))
 {
-    if(position_meeting(mouse_x, mouse_y, id))
-    {
-        KeyTouched(key);
-    }
+    Game.level = level;
+    room_goto(rLevel);
 }
 </string>
           </argument>
@@ -78,12 +80,8 @@ key = "";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw self and font
-draw_self();
-
-draw_set_colour(c_black);
-draw_set_font(fWordsLarge);
-draw_text(x + 10, y + 20, key);
+            <string>/// draw sprite
+draw_sprite_stretched_ext(sprite_index, 0, x, y, width, height, c_white, 1);
 </string>
           </argument>
         </arguments>
