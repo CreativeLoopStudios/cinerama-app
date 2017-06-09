@@ -52,18 +52,13 @@ height = 150;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// touch
-if(mouse_check_button_pressed(mb_left) and instance_position(mouse_x, mouse_y, id))
-{
-    Game.level = level;
-    room_goto(rLevel);
-}
+            <string>/// scale
+image_xscale = width / sprite_get_width(sprite_index);
+image_yscale = height / sprite_get_height(sprite_index);
 </string>
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -80,8 +75,12 @@ if(mouse_check_button_pressed(mb_left) and instance_position(mouse_x, mouse_y, i
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw sprite
-draw_sprite_stretched_ext(sprite_index, 0, x, y, width, height, c_white, 1);
+            <string>/// touch
+if(mouse_check_button_pressed(mb_left) and position_meeting(mouse_x, mouse_y, id))
+{
+    Game.level = level;
+    room_goto(rLevel);
+}
 </string>
           </argument>
         </arguments>

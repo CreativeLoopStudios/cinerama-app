@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>3815217</colour>
   <showcolour>-1</showcolour>
-  <code>instance_create(32, 32, LevelManager);</code>
+  <code>instance_create(120, 150, LevelManager);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

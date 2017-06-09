@@ -33,7 +33,7 @@ for(var i = 0; i &lt; array_length_1d(Game.levelSpr); i++)
     var levelBox = instance_create(xx, yy, LevelBox);
     levelBox.sprite_index = Game.levelSpr[i];
     levelBox.level = i;
-    xx += levelBox.width + 50;
+    xx += levelBox.width + 40;
 }
 </string>
           </argument>
