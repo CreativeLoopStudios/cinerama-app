@@ -30,6 +30,8 @@ level = noone;
 
 width = 150;
 height = 150;
+
+unlocked = false;
 </string>
           </argument>
         </arguments>
@@ -55,6 +57,11 @@ height = 150;
             <string>/// scale
 image_xscale = width / sprite_get_width(sprite_index);
 image_yscale = height / sprite_get_height(sprite_index);
+
+if(level == 0)
+{
+    unlocked = true;
+}
 </string>
           </argument>
         </arguments>
@@ -76,10 +83,43 @@ image_yscale = height / sprite_get_height(sprite_index);
           <argument>
             <kind>1</kind>
             <string>/// touch
-if(mouse_check_button_pressed(mb_left) and position_meeting(mouse_x, mouse_y, id))
+if(mouse_check_button_pressed(mb_left)
+    and position_meeting(mouse_x, mouse_y, id)
+    and unlocked)
 {
     Game.level = level;
     room_goto(rLevel);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// draw
+if(unlocked)
+{
+    draw_self();
+}
+else
+{
+    draw_sprite_ext(sprite_index, 0, x, y, image_xscale, image_yscale, 0, c_black, 1);
 }
 </string>
           </argument>

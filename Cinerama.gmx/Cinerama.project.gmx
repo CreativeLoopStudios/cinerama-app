@@ -50,6 +50,8 @@
       <script>scripts\NextLevel.gml</script>
       <script>scripts\CleanRoom.gml</script>
       <script>scripts\TheEnd.gml</script>
+      <script>scripts\SaveLevel.gml</script>
+      <script>scripts\LoadLevels.gml</script>
     </scripts>
     <scripts name="Keyboard">
       <script>scripts\KeyTouched.gml</script>

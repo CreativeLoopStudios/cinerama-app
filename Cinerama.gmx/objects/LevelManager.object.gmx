@@ -28,11 +28,20 @@
             <string>/// init levels
 var xx = x;
 var yy = y;
+
+var levelMap = LoadLevels();
+
 for(var i = 0; i &lt; array_length_1d(Game.levelSpr); i++)
 {
     var levelBox = instance_create(xx, yy, LevelBox);
     levelBox.sprite_index = Game.levelSpr[i];
     levelBox.level = i;
+    
+    if(not(is_undefined(ds_map_find_value(levelMap, i))))
+    {
+        levelBox.unlocked = true;
+    }
+    
     xx += levelBox.width + 40;
 }
 </string>

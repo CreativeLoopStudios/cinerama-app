@@ -51,7 +51,7 @@ hoverSprite = sNextHoverBtn;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// mouse release
+            <string>/// next level
 event_inherited();
 
 if(mouse_check_button_released(mb_left))
@@ -62,6 +62,7 @@ if(mouse_check_button_released(mb_left))
         {
             close = true;
         }
+        SaveLevel(Game.level, 0);
         CleanRoom();
         NextLevel();
     }
