@@ -42,7 +42,7 @@ for(var i = 0; i &lt; array_length_1d(Game.levelSpr); i++)
         levelBox.unlocked = true;
     }
     
-    xx += levelBox.width + 40;
+    xx += levelBox.size + 70;
 }
 </string>
           </argument>

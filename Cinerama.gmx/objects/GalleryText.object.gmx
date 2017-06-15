@@ -25,70 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init data
-level = noone;
+            <string>/// set text and position
+text = "Galeria";
 
-size = 98;
-
-unlocked = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// scale
-image_xscale = size / sprite_get_width(sprite_index);
-image_yscale = size / sprite_get_height(sprite_index);
-
-if(level == 0)
-{
-    unlocked = true;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// touch
-if(mouse_check_button_pressed(mb_left)
-    and position_meeting(mouse_x, mouse_y, id)
-    and unlocked)
-{
-    Game.level = level;
-    room_goto(rLevel);
-}
+x += string_width(text) / 2;
 </string>
           </argument>
         </arguments>
@@ -111,20 +51,10 @@ if(mouse_check_button_pressed(mb_left)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw
-var midSpriteX = size / 2 + 20;
-var midSpriteY = size / 2 + 20;
-
-draw_sprite_ext(sBlackBox, 0, x - midSpriteX, y - midSpriteY, 0.64, 0.64, 0, c_white, 1);
-
-if(unlocked)
-{
-    draw_self();
-}
-else
-{
-    draw_sprite_ext(sprite_index, 0, x, y, image_xscale, image_yscale, 0, c_black, 1);
-}
+            <string>/// draw font
+draw_set_font(fWordsUltraLarge);
+draw_set_colour(make_colour_rgb(228, 60, 60));
+draw_text(x, y, text);
 </string>
           </argument>
         </arguments>

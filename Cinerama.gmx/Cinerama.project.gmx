@@ -40,6 +40,7 @@
       <sprite>sprites\sNextHoverBtn</sprite>
       <sprite>sprites\sBackBtn</sprite>
       <sprite>sprites\sBackHoverBtn</sprite>
+      <sprite>sprites\sBlackBox</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -61,6 +62,7 @@
       <script>scripts\CreatePopup.gml</script>
       <script>scripts\CreateObjWithParent.gml</script>
       <script>scripts\SplitString.gml</script>
+      <script>scripts\CreateDebugText.gml</script>
     </scripts>
     <scripts name="MovieArt">
       <script>scripts\SetBreakLine.gml</script>
@@ -69,12 +71,15 @@
   <fonts name="fonts">
     <font>fonts\fWords</font>
     <font>fonts\fWordsLarge</font>
+    <font>fonts\fWordsUltraLarge</font>
   </fonts>
   <objects name="objects">
     <object>objects\MovieArt</object>
     <objects name="Util">
       <object>objects\DisplayManager</object>
       <object>objects\Game</object>
+      <object>objects\SizeHelper</object>
+      <object>objects\DebugText</object>
     </objects>
     <objects name="Keyboard">
       <object>objects\KeyboardKey</object>
@@ -121,6 +126,7 @@
     <objects name="LevelSelect">
       <object>objects\LevelManager</object>
       <object>objects\LevelBox</object>
+      <object>objects\GalleryText</object>
     </objects>
   </objects>
   <rooms name="rooms">
