@@ -60,6 +60,10 @@
       <script>scripts\Trim.gml</script>
       <script>scripts\CreatePopup.gml</script>
       <script>scripts\CreateObjWithParent.gml</script>
+      <script>scripts\SplitString.gml</script>
+    </scripts>
+    <scripts name="MovieArt">
+      <script>scripts\SetBreakLine.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

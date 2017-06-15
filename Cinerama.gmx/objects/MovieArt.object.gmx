@@ -39,7 +39,11 @@ yBar = yMovie + 300;
 instance_create(0, yBar, RedBar);
 
 xWord = 50;
-yWord = yBar + 80;
+yWord = yBar + 45;
+xStep = 60;
+yStep = 50;
+xMaxNumberSteps = ((Game.middleOfScreen * 2) - (2 * xWord)) / xStep;
+breakLine = xMaxNumberSteps;
 
 
 </string>
@@ -65,13 +69,23 @@ yWord = yBar + 80;
             <string>/// create bar letters
 var xTemp = xWord;
 
-for(var i = 1; i &lt;= string_length(wordToGuess); i++)
+var stringLength = string_length(wordToGuess);
+SetBreakLine(stringLength);
+
+var yTemp = yWord;
+
+for(var i = 1; i &lt;= stringLength; i++)
 {
+    if(i mod breakLine == 0) 
+    {
+        yTemp += yStep;
+        xTemp = xWord;
+    }
     if(not(string_char_at(wordToGuess, i) == " "))
     {
-        instance_create(xTemp, yWord, BarLetter);
+        instance_create(xTemp, yTemp, BarLetter);
     }
-    xTemp += 60;
+    xTemp += xStep;
 }
 </string>
           </argument>
@@ -119,15 +133,23 @@ draw_sprite_ext(spriteToDraw, 0, xMovie, yMovie, 0.2, 0.2, 0, c_white, 1);
             <kind>1</kind>
             <string>/// draw user letters
 var xTemp = xWord;
+var yTemp = yWord;
 for(var i = 1; i &lt;= string_length(wordInput); i++)
 {
+    if(i mod breakLine == 0) 
+    {
+        yTemp += yStep;
+        xTemp = xWord;
+    }
+    
     if(not(string_char_at(wordToGuess, i) == " "))
     {
         draw_set_colour(c_white);
         draw_set_font(fWords);
-        draw_text(xTemp + 10, yWord - 8, string_char_at(wordInput, i));
+        draw_text(xTemp + 10, yTemp - 4, string_char_at(wordInput, i));
     }
-    xTemp += 60;
+    
+    xTemp += xStep;
 }
 </string>
           </argument>
