@@ -38,13 +38,15 @@ yBar = yMovie + 300;
 
 instance_create(0, yBar, RedBar);
 
-xWord = 50;
-yWord = yBar + 45;
-xStep = 60;
-yStep = 50;
-xMaxNumberSteps = ((Game.middleOfScreen * 2) - (2 * xWord)) / xStep;
-breakLine = xMaxNumberSteps;
 
+xWord = 45;
+yWord = yBar + 45;
+xStep = xWord;
+yStep = 50;
+xMaxNumberSteps = floor((Game.middleOfScreen * 2) / xStep) - 1;
+breakLine = xMaxNumberSteps + 1;
+xTempFirstLine = 0;
+xTempSecondLine = 0;
 
 </string>
           </argument>
@@ -67,22 +69,30 @@ breakLine = xMaxNumberSteps;
           <argument>
             <kind>1</kind>
             <string>/// create bar letters
-var xTemp = xWord;
+
 
 var stringLength = string_length(wordToGuess);
 SetBreakLine(stringLength);
 
+//brakLine count with spaces so - 1 
+xTempFirstLine = AdjustXPosition( breakLine - 1, xWord);
+var xTemp = xTempFirstLine;
 var yTemp = yWord;
 
 for(var i = 1; i &lt;= stringLength; i++)
 {
     if(i mod breakLine == 0) 
     {
+        xTempSecondLine = AdjustXPosition(stringLength - i,xWord);
+        xTemp = xTempSecondLine;
         yTemp += yStep;
-        xTemp = xWord;
+        
+        continue; //ignore space
     }
+
     if(not(string_char_at(wordToGuess, i) == " "))
     {
+        
         instance_create(xTemp, yTemp, BarLetter);
     }
     xTemp += xStep;
@@ -132,21 +142,24 @@ draw_sprite_ext(spriteToDraw, 0, xMovie, yMovie, 0.2, 0.2, 0, c_white, 1);
           <argument>
             <kind>1</kind>
             <string>/// draw user letters
-var xTemp = xWord;
+var xTemp = xTempFirstLine;
 var yTemp = yWord;
-for(var i = 1; i &lt;= string_length(wordInput); i++)
+var stringLength = string_length(wordInput);
+
+for(var i = 1; i &lt;= stringLength; i++)
 {
     if(i mod breakLine == 0) 
     {
+        xTemp = xTempSecondLine;
         yTemp += yStep;
-        xTemp = xWord;
+        continue; //ignore space
     }
     
     if(not(string_char_at(wordToGuess, i) == " "))
     {
         draw_set_colour(c_white);
         draw_set_font(fWords);
-        draw_text(xTemp + 10, yTemp - 4, string_char_at(wordInput, i));
+        draw_text(xTemp + 5, yTemp, string_char_at(wordInput, i));
     }
     
     xTemp += xStep;

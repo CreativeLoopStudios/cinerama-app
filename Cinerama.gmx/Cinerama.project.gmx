@@ -66,6 +66,7 @@
     </scripts>
     <scripts name="MovieArt">
       <script>scripts\SetBreakLine.gml</script>
+      <script>scripts\AdjustXPosition.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

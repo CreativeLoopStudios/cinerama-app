@@ -32,7 +32,13 @@ levelSpr[0] = sSnowWhite;
 levelWord[0] = "BRANCA DE NEVE";
 
 levelSpr[1] = sGodfather;
-levelWord[1] = "O PODEROSO CHEFÃO";
+levelWord[1] = "O PODEROSO CHEFAO";
+
+levelSpr[2] = sGodfather;
+levelWord[2] = "Um Sonho de Liberdade";
+
+levelSpr[3] = sGodfather;
+levelWord[3] = "Os Cacadores da Arca Perdida";
 
 middleOfScreen = DisplayManager.idealWidth / 2;
 
