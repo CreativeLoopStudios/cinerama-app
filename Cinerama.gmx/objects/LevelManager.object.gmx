@@ -29,7 +29,9 @@
 var xx = x;
 var yy = y;
 
-var levelMap = LoadLevels();
+var currentSavedLevel = LoadData("Level");
+
+show_debug_message(currentSavedLevel);
 
 for(var i = 0; i &lt; array_length_1d(Game.levelSpr); i++)
 {
@@ -37,7 +39,7 @@ for(var i = 0; i &lt; array_length_1d(Game.levelSpr); i++)
     levelBox.sprite_index = Game.levelSpr[i];
     levelBox.level = i;
     
-    if(not(is_undefined(ds_map_find_value(levelMap, i))))
+    if(real(currentSavedLevel) &gt;= i)
     {
         levelBox.unlocked = true;
     }

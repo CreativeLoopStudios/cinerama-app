@@ -62,7 +62,7 @@ if(mouse_check_button_released(mb_left))
         {
             close = true;
         }
-        SaveLevel(Game.level, 0);
+        SaveData("Level", Game.level);
         CleanRoom();
         NextLevel();
     }
