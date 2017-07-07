@@ -18,6 +18,7 @@
     <sprites name="Keyboard">
       <sprite>sprites\sKey</sprite>
       <sprite>sprites\sKeyLarge</sprite>
+      <sprite>sprites\sKeyBackspace</sprite>
     </sprites>
     <sprites name="Buttons">
       <sprite>sprites\sPlayButton</sprite>
