@@ -51,12 +51,7 @@ key = ENTER;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw font
-draw_self();
-
-draw_set_colour(c_black);
-draw_set_font(fWordsLarge);
-draw_text(x + 50, y + 20, "ENTER");
+            <string>draw_self();
 </string>
           </argument>
         </arguments>

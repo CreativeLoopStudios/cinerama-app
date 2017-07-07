@@ -81,9 +81,9 @@ key = "";
             <string>/// draw self and font
 draw_self();
 
-draw_set_colour(c_black);
+draw_set_colour(c_white);
 draw_set_font(fWordsLarge);
-draw_text(x + 10, y + 20, key);
+draw_text(x + 6, y + 20, key);
 </string>
           </argument>
         </arguments>
