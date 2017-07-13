@@ -15,7 +15,10 @@
 instance_create(100, DisplayManager.idealHeight - 50, Cheat);
 instance_create(300, DisplayManager.idealHeight - 50, Restart);
 
-instance_create(0, 0, MovieArt);</code>
+instance_create(0, 0, MovieArt);
+
+instance_create(DisplayManager.idealWidth - 100, 150, Timer);
+instance_create(DisplayManager.idealWidth - 200, 150, TimerMedal);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

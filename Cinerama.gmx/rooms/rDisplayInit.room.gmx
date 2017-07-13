@@ -12,7 +12,8 @@
   <showcolour>-1</showcolour>
   <code>instance_create(0, 0, DisplayManager);
 instance_create(0, 0, Game);
-instance_create(0, 0, SizeHelper);</code>
+instance_create(0, 0, SizeHelper);
+instance_create(0, 0, PlayerData);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

@@ -64,10 +64,14 @@
       <script>scripts\CreateObjWithParent.gml</script>
       <script>scripts\SplitString.gml</script>
       <script>scripts\CreateDebugText.gml</script>
+      <script>scripts\PadLeft.gml</script>
     </scripts>
     <scripts name="MovieArt">
       <script>scripts\SetBreakLine.gml</script>
       <script>scripts\AdjustXPosition.gml</script>
+    </scripts>
+    <scripts name="Timer">
+      <script>scripts\ChangeTimerMedal.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -77,6 +81,7 @@
   </fonts>
   <objects name="objects">
     <object>objects\MovieArt</object>
+    <object>objects\PlayerData</object>
     <objects name="Util">
       <object>objects\DisplayManager</object>
       <object>objects\Game</object>
@@ -130,6 +135,10 @@
       <object>objects\LevelBox</object>
       <object>objects\GalleryText</object>
     </objects>
+    <objects name="Timer">
+      <object>objects\Timer</object>
+      <object>objects\TimerMedal</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rDisplayInit</room>
@@ -137,10 +146,13 @@
     <room>rooms\rLevel</room>
     <room>rooms\rSplashScreen</room>
   </rooms>
-  <constants number="3">
+  <constants number="6">
     <constant name="ENTER">1</constant>
     <constant name="CHEAT">2</constant>
     <constant name="RESTART">3</constant>
+    <constant name="GOLD">10</constant>
+    <constant name="SILVER">11</constant>
+    <constant name="BRONZE">12</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

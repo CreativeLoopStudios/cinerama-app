@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,25 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init levels
-var xx = x;
-var yy = y;
-
-var currentSavedLevel = PlayerData.lastLevel;
-
-for(var i = 0; i &lt; array_length_1d(Game.levelSpr); i++)
-{
-    var levelBox = instance_create(xx, yy, LevelBox);
-    levelBox.sprite_index = Game.levelSpr[i];
-    levelBox.level = i;
-    
-    if(real(currentSavedLevel) &gt;= i)
-    {
-        levelBox.unlocked = true;
-    }
-    
-    xx += levelBox.size + 70;
-}
+            <string>/// init player data
+lastLevel = LoadData("Level");
 </string>
           </argument>
         </arguments>
