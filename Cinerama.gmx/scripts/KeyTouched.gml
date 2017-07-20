@@ -1,5 +1,6 @@
-/// KeyTouched(key)
-var key = argument0;
+/// KeyTouched(keyObj, key)
+var keyObj = argument0;
+var key = argument1;
 
 if(instance_exists(MovieArt) and not(instance_exists(Popup)))
 {
@@ -15,11 +16,17 @@ if(instance_exists(MovieArt) and not(instance_exists(Popup)))
             /// win/lose condition
             if(string_length(wordInput) == string_length(wordToGuess) and wordInput == wordToGuess)
             {
+                SaveData("LastLevelCompleted", Game.level);
+                SaveData("Level" + string(Game.level), PlayerData.currentMedal);
                 CreatePopup();
+                PauseTimer();
             }
             else
             {
-                WrongWord();
+                keyObj.keyVibrating = true;
+                keyObj.alarm[0] = room_speed * 0.2;
+                CleanWord();
+                IncrementTimer(10);
             }
         }
         else if(key == CHEAT)

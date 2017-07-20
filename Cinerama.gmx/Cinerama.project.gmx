@@ -48,12 +48,12 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Game">
-      <script>scripts\WrongWord.gml</script>
       <script>scripts\NextLevel.gml</script>
       <script>scripts\CleanRoom.gml</script>
       <script>scripts\TheEnd.gml</script>
       <script>scripts\SaveData.gml</script>
       <script>scripts\LoadData.gml</script>
+      <script>scripts\ReloadPlayerData.gml</script>
     </scripts>
     <scripts name="Keyboard">
       <script>scripts\KeyTouched.gml</script>
@@ -69,9 +69,14 @@
     <scripts name="MovieArt">
       <script>scripts\SetBreakLine.gml</script>
       <script>scripts\AdjustXPosition.gml</script>
+      <script>scripts\CleanWord.gml</script>
     </scripts>
     <scripts name="Timer">
       <script>scripts\ChangeTimerMedal.gml</script>
+      <script>scripts\StopTimer.gml</script>
+      <script>scripts\PauseTimer.gml</script>
+      <script>scripts\StartTimer.gml</script>
+      <script>scripts\IncrementTimer.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -85,6 +90,7 @@
     <objects name="Util">
       <object>objects\DisplayManager</object>
       <object>objects\Game</object>
+      <object>objects\ParentFollow</object>
       <object>objects\SizeHelper</object>
       <object>objects\DebugText</object>
     </objects>
@@ -122,13 +128,16 @@
       <object>objects\M</object>
     </objects>
     <objects name="UI">
+      <objects name="Popup">
+        <object>objects\Popup</object>
+        <object>objects\Btn</object>
+        <object>objects\NextBtn</object>
+        <object>objects\BackBtn</object>
+        <object>objects\WonMedal</object>
+      </objects>
       <object>objects\BarLetter</object>
       <object>objects\BlueBar</object>
       <object>objects\RedBar</object>
-      <object>objects\Popup</object>
-      <object>objects\Btn</object>
-      <object>objects\NextBtn</object>
-      <object>objects\BackBtn</object>
     </objects>
     <objects name="LevelSelect">
       <object>objects\LevelManager</object>
@@ -151,8 +160,8 @@
     <constant name="CHEAT">2</constant>
     <constant name="RESTART">3</constant>
     <constant name="GOLD">10</constant>
-    <constant name="SILVER">11</constant>
-    <constant name="BRONZE">12</constant>
+    <constant name="SILVER">20</constant>
+    <constant name="BRONZE">30</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

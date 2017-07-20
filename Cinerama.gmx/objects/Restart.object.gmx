@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (not(Game.debug))
+            <string>/// init
+event_inherited();
+
+if (not(Game.debug))
 {
     instance_destroy();
 }

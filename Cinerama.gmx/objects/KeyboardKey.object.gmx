@@ -27,6 +27,36 @@
             <kind>1</kind>
             <string>/// init key
 key = "";
+
+keyVibrating = false;
+
+shake = 5;
+
+drawText = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// stop vibrating
+keyVibrating = false;
 </string>
           </argument>
         </arguments>
@@ -49,11 +79,11 @@ key = "";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (mouse_check_button_pressed(mb_left))
+            <string>if (mouse_check_button_released(mb_left))
 {
     if(position_meeting(mouse_x, mouse_y, id))
     {
-        KeyTouched(key);
+        KeyTouched(id, key);
     }
 }
 </string>
@@ -79,11 +109,21 @@ key = "";
           <argument>
             <kind>1</kind>
             <string>/// draw self and font
-draw_self();
-
-draw_set_colour(c_white);
-draw_set_font(fWordsLarge);
-draw_text(x + 6, y + 20, key);
+if(keyVibrating)
+{
+    draw_sprite_ext(sprite_index, image_index, x + irandom_range(-shake, shake), y + irandom_range(-shake, shake), image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+    show_debug_message(x + irandom_range(-shake, shake));
+}
+else
+{
+    draw_self();
+    
+    if(drawText) {
+        draw_set_colour(c_white);
+        draw_set_font(fWordsLarge);
+        draw_text(x + 6, y + 20, key);
+    }
+}
 </string>
           </argument>
         </arguments>

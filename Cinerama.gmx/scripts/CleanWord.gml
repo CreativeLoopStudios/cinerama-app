@@ -1,0 +1,5 @@
+/// CleanWord()
+with(MovieArt)
+{
+    wordInput = "";
+}

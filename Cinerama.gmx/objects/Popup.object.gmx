@@ -36,6 +36,7 @@ close = false;
 targetY = DisplayManager.idealHeight / 2;
 
 // buttons
+wonMedal = CreateObjWithParent(x, y, WonMedal, id, 0, -160);
 nextBtn = CreateObjWithParent(x, y, NextBtn, id, 160, 250);
 backBtn = CreateObjWithParent(x, y, BackBtn, id, -160, 250);
 </string>

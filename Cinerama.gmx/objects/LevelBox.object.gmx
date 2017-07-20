@@ -82,7 +82,7 @@ if(level == 0)
           <argument>
             <kind>1</kind>
             <string>/// touch
-if(mouse_check_button_pressed(mb_left)
+if(mouse_check_button_released(mb_left)
     and position_meeting(mouse_x, mouse_y, id)
     and unlocked)
 {

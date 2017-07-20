@@ -26,7 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>/// init player data
-lastLevel = LoadData("Level");
+lastLevelCompleted = LoadData("LastLevelCompleted");
+
+savedMedal = LoadData("Level" + string(Game.level));
+
+currentMedal = noone;
+
+tries = 0;
 </string>
           </argument>
         </arguments>

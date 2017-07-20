@@ -28,6 +28,10 @@
             <string>/// init timer
 seconds = 0;
 minutes = 0;
+
+timerOn = true;
+
+PlayerData.currentMedal = GOLD;
 </string>
           </argument>
         </arguments>
@@ -44,27 +48,30 @@ minutes = 0;
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
             <string>/// increase seconds
-seconds += (delta_time * 0.000001) * room_speed;
-
-if(seconds div 60 == 60)
+if(timerOn)
 {
-    seconds = 0;
-    minutes += 1;
-    
-    if(minutes &gt;= 1 and minutes &lt; 3)
+    seconds += (delta_time * 0.000001) * room_speed;
+
+    if(seconds div 60 &gt;= 60)
     {
-        ChangeTimerMedal(SILVER);
-    }
-    else if(minutes &gt;= 3)
-    {
-        ChangeTimerMedal(BRONZE);
+        seconds = ((seconds div 60) - 60) * 60;
+        minutes += 1;
+        
+        if(minutes &gt;= 1 and minutes &lt; 3)
+        {
+            PlayerData.currentMedal = SILVER;
+        }
+        else if(minutes &gt;= 3)
+        {
+            PlayerData.currentMedal = BRONZE;
+        }
     }
 }
 </string>

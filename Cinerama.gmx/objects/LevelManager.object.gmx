@@ -29,7 +29,7 @@
 var xx = x;
 var yy = y;
 
-var currentSavedLevel = PlayerData.lastLevel;
+var lastLevelCompleted = PlayerData.lastLevelCompleted;
 
 for(var i = 0; i &lt; array_length_1d(Game.levelSpr); i++)
 {
@@ -37,7 +37,7 @@ for(var i = 0; i &lt; array_length_1d(Game.levelSpr); i++)
     levelBox.sprite_index = Game.levelSpr[i];
     levelBox.level = i;
     
-    if(real(currentSavedLevel) &gt;= i)
+    if(real(lastLevelCompleted) + 1 &gt;= i)
     {
         levelBox.unlocked = true;
     }

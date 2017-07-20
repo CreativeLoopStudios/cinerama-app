@@ -8,3 +8,5 @@ with(BarLetter)
 {
     instance_destroy();
 }
+
+StopTimer();
