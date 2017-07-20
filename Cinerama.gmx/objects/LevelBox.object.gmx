@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>/// init data
 level = noone;
+medal = noone;
 
 size = 98;
 
@@ -115,7 +116,7 @@ if(mouse_check_button_released(mb_left)
 var midSpriteX = size / 2 + 20;
 var midSpriteY = size / 2 + 20;
 
-draw_sprite_ext(sBlackBox, 0, x - midSpriteX, y - midSpriteY, 0.64, 0.64, 0, c_white, 1);
+draw_sprite_ext(sBlackBox, 0, x - midSpriteX, y - midSpriteY, 0.64, 0.64, image_angle, c_white, image_alpha);
 
 if(unlocked)
 {
@@ -123,7 +124,50 @@ if(unlocked)
 }
 else
 {
-    draw_sprite_ext(sprite_index, 0, x, y, image_xscale, image_yscale, 0, c_black, 1);
+    draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c_black, image_alpha);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// draw medal
+if(medal != noone)
+{
+    medal = real(medal);
+    if(medal == GOLD or medal == SILVER or medal == BRONZE)
+    {
+        var sprToDraw = sBronzeMedal;
+        switch(medal)
+        {
+            case GOLD:
+                sprToDraw = sGoldMedal;
+                break;
+            case SILVER:
+                sprToDraw = sSilverMedal;
+                break;
+            case BRONZE:
+                sprToDraw = sBronzeMedal;
+                break;
+        }
+    
+        draw_sprite_ext(sprToDraw, 0, x + 50, y + 50, 0.15, 0.15, image_angle, image_blend, image_alpha);
+    }
 }
 </string>
           </argument>

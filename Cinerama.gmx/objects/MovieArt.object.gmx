@@ -120,7 +120,7 @@ for(var i = 1; i &lt;= stringLength; i++)
           <argument>
             <kind>1</kind>
             <string>/// drawing movie_art
-draw_sprite_ext(spriteToDraw, 0, xMovie, yMovie, 0.2, 0.2, 0, c_white, 1);
+draw_sprite_ext(spriteToDraw, image_index, xMovie, yMovie, 0.2, 0.2, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>
