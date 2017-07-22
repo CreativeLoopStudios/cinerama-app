@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,32 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init level
-level = 0;
-
-levelSpr[0] = sSnowWhite;
-levelWord[0] = "BRANCA DE NEVE";
-
-levelSpr[1] = sGodfather;
-levelWord[1] = "O PODEROSO CHEFAO";
-
-levelSpr[2] = sGodfather;
-levelWord[2] = "Um Sonho de Liberdade";
-
-levelSpr[3] = sGodfather;
-levelWord[3] = "Os Cacadores da Arca Perdida";
-
-middleOfScreen = DisplayManager.idealWidth / 2;
-marginTop = 100;
-marginBottom = 100;
-
-debug = true;
+            <string>/// init data
+coins = PlayerData.coins;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -67,22 +49,10 @@ debug = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// debug
-if(debug)
-{
-    if(keyboard_check_pressed(ord('R')))
-    {
-        game_restart();
-    }
-    
-    if(keyboard_check_pressed(ord('1')))
-    {
-        with(MovieArt)
-        {
-            wordInput = wordToGuess;
-        }
-    }
-}
+            <string>/// draw text
+draw_set_colour(c_white);
+draw_set_font(fWordsLarge);
+draw_text(x, y, string(coins) + " MOEDAS");
 </string>
           </argument>
         </arguments>

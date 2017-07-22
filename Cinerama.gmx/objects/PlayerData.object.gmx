@@ -33,6 +33,15 @@ savedMedal = LoadData("Level" + string(Game.level));
 currentMedal = noone;
 
 tries = 0;
+
+coins = LoadData("Coins");
+
+// give coins for the first time
+if(coins == noone)
+{
+    coins = 2;
+    SaveData("Coins", coins);
+}
 </string>
           </argument>
         </arguments>

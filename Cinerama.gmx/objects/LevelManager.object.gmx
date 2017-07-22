@@ -37,7 +37,6 @@ for(var i = 0; i &lt; array_length_1d(Game.levelSpr); i++)
     levelBox.sprite_index = Game.levelSpr[i];
     levelBox.level = i;
     levelBox.medal = LoadData("Level" + string(i));
-    show_debug_message(levelBox.medal);
     
     if(real(lastLevelCompleted) + 1 &gt;= i)
     {

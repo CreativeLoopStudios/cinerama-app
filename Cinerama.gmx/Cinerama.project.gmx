@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\aKeyTouched</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="MovieArt">
       <sprite>sprites\sSnowWhite</sprite>
@@ -134,6 +136,9 @@
         <object>objects\NextBtn</object>
         <object>objects\BackBtn</object>
         <object>objects\WonMedal</object>
+      </objects>
+      <objects name="Coins">
+        <object>objects\CoinsUI</object>
       </objects>
       <object>objects\BarLetter</object>
       <object>objects\BlueBar</object>

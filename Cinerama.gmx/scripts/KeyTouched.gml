@@ -52,5 +52,7 @@ if(instance_exists(MovieArt) and not(instance_exists(Popup)))
                 wordInput += key;
             }
         }
+        
+        audio_play_sound(aKeyTouched, 1, false);
     }
 }

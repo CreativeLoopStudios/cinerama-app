@@ -112,7 +112,6 @@ keyVibrating = false;
 if(keyVibrating)
 {
     draw_sprite_ext(sprite_index, image_index, x + irandom_range(-shake, shake), y + irandom_range(-shake, shake), image_xscale, image_yscale, image_angle, image_blend, image_alpha);
-    show_debug_message(x + irandom_range(-shake, shake));
 }
 else
 {

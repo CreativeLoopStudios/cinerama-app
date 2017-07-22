@@ -17,8 +17,10 @@ instance_create(300, DisplayManager.idealHeight - 50, Restart);
 
 instance_create(0, 0, MovieArt);
 
-instance_create(DisplayManager.idealWidth - 100, 150, Timer);
-instance_create(DisplayManager.idealWidth - 200, 150, TimerMedal);</code>
+instance_create(DisplayManager.idealWidth - 100, Game.marginTop, Timer);
+instance_create(DisplayManager.idealWidth - 200, Game.marginTop, TimerMedal);
+
+instance_create(DisplayManager.idealWidth / 2, Game.marginTop, CoinsUI);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
