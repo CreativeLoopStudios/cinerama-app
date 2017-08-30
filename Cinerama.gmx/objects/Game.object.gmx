@@ -28,17 +28,68 @@
             <string>/// init level
 level = 0;
 
-levelSpr[0] = sSnowWhite;
-levelWord[0] = "BRANCA DE NEVE";
+var sprIndex = 0;
+var wordIndex = 0;
 
-levelSpr[1] = sGodfather;
-levelWord[1] = "O PODEROSO CHEFAO";
+levelSpr[sprIndex++] = sBrancaDeNeve;
+levelWord[wordIndex++] = "BRANCA DE NEVE";
 
-levelSpr[2] = sGodfather;
-levelWord[2] = "Um Sonho de Liberdade";
+levelSpr[sprIndex++] = sPoderosoChefao;
+levelWord[wordIndex++] = "O PODEROSO CHEFAO";
 
-levelSpr[3] = sGodfather;
-levelWord[3] = "Os Cacadores da Arca Perdida";
+levelSpr[sprIndex++] = sBelaFera;
+levelWord[wordIndex++] = "A BELA E A FERA";
+
+levelSpr[sprIndex++] = sBatmanBegins;
+levelWord[wordIndex++] = "BATMAN BEGINS";
+
+levelSpr[sprIndex++] = sBatmanERobin;
+levelWord[wordIndex++] = "BATMAN E ROBIN";
+
+levelSpr[sprIndex++] = sBatmanEternamente;
+levelWord[wordIndex++] = "BATMAN ETERNAMENTE";
+
+levelSpr[sprIndex++] = sConstantine;
+levelWord[wordIndex++] = "CONSTANTINE";
+
+levelSpr[sprIndex++] = sCreed;
+levelWord[wordIndex++] = "CREED";
+
+levelSpr[sprIndex++] = sForrestGump;
+levelWord[wordIndex++] = "FORREST GUMP";
+
+levelSpr[sprIndex++] = sHarryPotterEOCaliceDeFogo;
+levelWord[wordIndex++] = "HARRY POTTER E O CALICE DE FOGO";
+
+levelSpr[sprIndex++] = sKarateKid;
+levelWord[wordIndex++] = "KARATE KID";
+
+levelSpr[sprIndex++] = sKillBill;
+levelWord[wordIndex++] = "KILL BILL";
+
+levelSpr[sprIndex++] = sMadMaxEstradaDaFuria;
+levelWord[wordIndex++] = "MAD MAX ESTRADA DA FURIA";
+
+levelSpr[sprIndex++] = sMoana;
+levelWord[wordIndex++] = "MOANA";
+
+levelSpr[sprIndex++] = sOProfessional;
+levelWord[wordIndex++] = "O PROFESSIONAL";
+
+levelSpr[sprIndex++] = sOSilencioDosInocentes;
+levelWord[wordIndex++] = "O SILENCIO DOS INOCENTES";
+
+levelSpr[sprIndex++] = sPsicose;
+levelWord[wordIndex++] = "PSICOSE";
+
+levelSpr[sprIndex++] = sToyStory2;
+levelWord[wordIndex++] = "TOY STORY 2";
+
+levelSpr[sprIndex++] = sTransformersAVingancaDosDerrotados;
+levelWord[wordIndex++] = "TRANSFORMERS A VINGANCA DOS DERROTADOS";
+
+levelSpr[sprIndex++] = sTubarao;
+levelWord[wordIndex++] = "TUBARAO";
 
 middleOfScreen = DisplayManager.idealWidth / 2;
 marginTop = 100;

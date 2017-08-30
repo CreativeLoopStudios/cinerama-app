@@ -38,7 +38,6 @@ yBar = yMovie + 300;
 
 instance_create(0, yBar, RedBar);
 
-
 xWord = 45;
 yWord = yBar + 45;
 xStep = xWord;
@@ -120,7 +119,7 @@ for(var i = 1; i &lt;= stringLength; i++)
           <argument>
             <kind>1</kind>
             <string>/// drawing movie_art
-draw_sprite_ext(spriteToDraw, image_index, xMovie, yMovie, 0.2, 0.2, image_angle, image_blend, image_alpha);
+draw_sprite_ext(spriteToDraw, image_index, xMovie, yMovie, 0.8, 0.8, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

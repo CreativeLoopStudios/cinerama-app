@@ -41,6 +41,7 @@ if(coins == noone)
 {
     coins = 2;
     SaveData("Coins", coins);
+    SaveData("CoinsEarned", 0);
 }
 </string>
           </argument>

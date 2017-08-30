@@ -9,8 +9,26 @@
   </sounds>
   <sprites name="sprites">
     <sprites name="MovieArt">
-      <sprite>sprites\sSnowWhite</sprite>
-      <sprite>sprites\sGodfather</sprite>
+      <sprite>sprites\sBrancaDeNeve</sprite>
+      <sprite>sprites\sPoderosoChefao</sprite>
+      <sprite>sprites\sBelaFera</sprite>
+      <sprite>sprites\sBatmanBegins</sprite>
+      <sprite>sprites\sBatmanERobin</sprite>
+      <sprite>sprites\sBatmanEternamente</sprite>
+      <sprite>sprites\sConstantine</sprite>
+      <sprite>sprites\sCreed</sprite>
+      <sprite>sprites\sForrestGump</sprite>
+      <sprite>sprites\sHarryPotterEOCaliceDeFogo</sprite>
+      <sprite>sprites\sKarateKid</sprite>
+      <sprite>sprites\sKillBill</sprite>
+      <sprite>sprites\sMadMaxEstradaDaFuria</sprite>
+      <sprite>sprites\sMoana</sprite>
+      <sprite>sprites\sOProfessional</sprite>
+      <sprite>sprites\sOSilencioDosInocentes</sprite>
+      <sprite>sprites\sPsicose</sprite>
+      <sprite>sprites\sToyStory2</sprite>
+      <sprite>sprites\sTransformersAVingancaDosDerrotados</sprite>
+      <sprite>sprites\sTubarao</sprite>
     </sprites>
     <sprites name="Medals">
       <sprite>sprites\sBronzeMedal</sprite>
@@ -44,6 +62,11 @@
       <sprite>sprites\sBackBtn</sprite>
       <sprite>sprites\sBackHoverBtn</sprite>
       <sprite>sprites\sBlackBox</sprite>
+      <sprite>sprites\sCoin</sprite>
+      <sprite>sprites\sMuteOn</sprite>
+      <sprite>sprites\sMuteOff</sprite>
+      <sprite>sprites\sHelp</sprite>
+      <sprite>sprites\sPlayBtn</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -56,6 +79,10 @@
       <script>scripts\SaveData.gml</script>
       <script>scripts\LoadData.gml</script>
       <script>scripts\ReloadPlayerData.gml</script>
+      <script>scripts\WinCondition.gml</script>
+      <script>scripts\LoseCondition.gml</script>
+      <script>scripts\CalculateIfCoinIsGained.gml</script>
+      <script>scripts\IncrementPlayerCoins.gml</script>
     </scripts>
     <scripts name="Keyboard">
       <script>scripts\KeyTouched.gml</script>
@@ -160,13 +187,14 @@
     <room>rooms\rLevel</room>
     <room>rooms\rSplashScreen</room>
   </rooms>
-  <constants number="6">
+  <constants number="7">
     <constant name="ENTER">1</constant>
     <constant name="CHEAT">2</constant>
     <constant name="RESTART">3</constant>
     <constant name="GOLD">10</constant>
     <constant name="SILVER">20</constant>
     <constant name="BRONZE">30</constant>
+    <constant name="LEVELS_TO_WIN_COINS">4</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

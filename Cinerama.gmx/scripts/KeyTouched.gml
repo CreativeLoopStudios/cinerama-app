@@ -16,17 +16,13 @@ if(instance_exists(MovieArt) and not(instance_exists(Popup)))
             /// win/lose condition
             if(string_length(wordInput) == string_length(wordToGuess) and wordInput == wordToGuess)
             {
-                SaveData("LastLevelCompleted", Game.level);
-                SaveData("Level" + string(Game.level), PlayerData.currentMedal);
-                CreatePopup();
-                PauseTimer();
+                WinCondition();
             }
             else
             {
                 keyObj.keyVibrating = true;
                 keyObj.alarm[0] = room_speed * 0.2;
-                CleanWord();
-                IncrementTimer(10);
+                LoseCondition();
             }
         }
         else if(key == CHEAT)

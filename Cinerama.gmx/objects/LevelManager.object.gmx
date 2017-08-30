@@ -29,8 +29,14 @@
 var xx = x;
 var yy = y;
 
+var marginBlackBox = 70;
+
 var lastLevelCompleted = PlayerData.lastLevelCompleted;
 
+var blackBoxWidth = sprite_get_width(sBlackBox) + (marginBlackBox / 2);
+var boxesPerLine = DisplayManager.idealWidth div blackBoxWidth;
+
+var line = 0;
 for(var i = 0; i &lt; array_length_1d(Game.levelSpr); i++)
 {
     var levelBox = instance_create(xx, yy, LevelBox);
@@ -43,7 +49,14 @@ for(var i = 0; i &lt; array_length_1d(Game.levelSpr); i++)
         levelBox.unlocked = true;
     }
     
-    xx += levelBox.size + 70;
+    xx += levelBox.size + marginBlackBox;
+    if(line + 1 == boxesPerLine) {
+        xx = x;
+        yy += blackBoxWidth;
+        line = 0;
+    } else {
+        line++;
+    }
 }
 </string>
           </argument>

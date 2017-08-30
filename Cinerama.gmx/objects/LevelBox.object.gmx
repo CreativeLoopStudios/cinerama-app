@@ -116,7 +116,7 @@ if(mouse_check_button_released(mb_left)
 var midSpriteX = size / 2 + 20;
 var midSpriteY = size / 2 + 20;
 
-draw_sprite_ext(sBlackBox, 0, x - midSpriteX, y - midSpriteY, 0.64, 0.64, image_angle, c_white, image_alpha);
+draw_sprite_ext(sBlackBox, 0, x - midSpriteX, y - midSpriteY, 1, 1, image_angle, c_white, image_alpha);
 
 if(unlocked)
 {
