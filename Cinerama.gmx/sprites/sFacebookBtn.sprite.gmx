@@ -8,18 +8,18 @@
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
-  <bbox_right>223</bbox_right>
+  <bbox_right>421</bbox_right>
   <bbox_top>0</bbox_top>
-  <bbox_bottom>375</bbox_bottom>
+  <bbox_bottom>113</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>224</width>
-  <height>376</height>
+  <width>422</width>
+  <height>114</height>
   <frames>
-    <frame index="0">images\sCoin_0.png</frame>
+    <frame index="0">images\sFacebookBtn_0.png</frame>
   </frames>
 </sprite>

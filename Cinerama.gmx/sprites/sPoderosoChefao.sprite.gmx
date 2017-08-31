@@ -2,15 +2,15 @@
 <sprite>
   <type>0</type>
   <xorig>540</xorig>
-  <yorigin>556</yorigin>
+  <yorigin>465</yorigin>
   <colkind>1</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>0</bbox_left>
-  <bbox_right>1079</bbox_right>
-  <bbox_top>0</bbox_top>
-  <bbox_bottom>1112</bbox_bottom>
+  <bbox_left>101</bbox_left>
+  <bbox_right>968</bbox_right>
+  <bbox_top>18</bbox_top>
+  <bbox_bottom>912</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -18,7 +18,7 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>1080</width>
-  <height>1113</height>
+  <height>930</height>
   <frames>
     <frame index="0">images\sPoderosoChefao_0.png</frame>
   </frames>

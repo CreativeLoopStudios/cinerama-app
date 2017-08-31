@@ -1,11 +1,13 @@
 /// WinCondition()
-// save completed level
-SaveData("LastLevelCompleted", Game.level);
 // save medal of the level
-SaveData("Level" + string(Game.level), PlayerData.currentMedal);
-
-CreatePopup();
+var levelStr = "Level" + string(Game.level);
+if(LoadData(levelStr) == noone) {
+    // save completed level
+    SaveData("LastLevelCompleted", Game.level);
+    SaveData("Level" + string(Game.level), PlayerData.currentMedal);
+    CalculateIfCoinIsGained();
+}
 
 PauseTimer();
 
-CalculateIfCoinIsGained();
+CreatePopup();

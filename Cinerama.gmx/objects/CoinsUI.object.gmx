@@ -51,8 +51,9 @@ coins = PlayerData.coins;
             <kind>1</kind>
             <string>/// draw text
 draw_set_colour(c_white);
-draw_set_font(fWordsLarge);
-draw_text(x, y, string(coins) + " MOEDAS");
+draw_set_font(fWordsUltraLarge);
+draw_text(x, y, string(coins));
+draw_sprite_ext(sCoin, 0, x + 5, y - 70, 0.2, 0.2, image_angle, image_blend, image_alpha);
 </string>
           </argument>
         </arguments>

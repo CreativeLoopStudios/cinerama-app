@@ -34,7 +34,7 @@ currentMedal = noone;
 
 tries = 0;
 
-coins = LoadData("Coins");
+coins = int64(LoadData("Coins"));
 
 // give coins for the first time
 if(coins == noone)
